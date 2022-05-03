@@ -9,10 +9,33 @@
 
 <body>
     <?php
-    $username = "Taavi";
+    $member = [
+        ['firstName' => 'Taavi', 'age' => 41, 'country' => 'Estonia'],
+        ['firstName' => 'Tru', 'age' => 42, 'country' => 'Estonia'],
+        ['firstName' => 'Fal', 'age' => 43, 'country' => 'Estonia'],
+
+    ];
+
+    // $member = array(
+    //     'name' => 'Taavi',
+    //     'age' => 41,
+    //     'country' => 'Estonia'
+    // );
+
+    $member['lastName'] = 'Univer';
+
     ?>
-    <p>It is: <?php echo date('M') ?></p>
-    <p>It is: <?php echo $username; ?></p>
+
+
+    <p>Date: <?php echo date('d M Y') ?></p>
+    <p>First name: <?php echo $member[0]['firstName']; ?></p>
+
+    <p>Last name: <?php echo $member['lastName']; ?></p>
+
+    <p>Age: <?php echo $member[0]['age']; ?></p>
+    <p>Country: <?php echo $member[0]['country']; ?></p>
+    <p>-----------------</p>
+    <p>First Name: <?php echo $member[1]['firstName']; ?></p>
 
 </body>
 
