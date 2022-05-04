@@ -24,6 +24,13 @@
 
     $member['lastName'] = 'Univer';
 
+    $fName = 'Taavi';
+    $lName = 'Univer';
+
+    $name .= $fName;
+    $name .= " $lName";
+
+
     ?>
 
 
@@ -34,8 +41,16 @@
 
     <p>Age: <?php echo $member[0]['age']; ?></p>
     <p>Country: <?php echo $member[0]['country']; ?></p>
-    <p>-----------------</p>
+
+    <p>------ get value with index -----------</p>
     <p>First Name: <?php echo $member[1]['firstName']; ?></p>
+
+    <p>----- concatenated text -------</p>
+    <p><?= 'first name' . ' last name' ?></p>
+    <p>name: <?= "$fName $lName" ?></p>
+    <p><?= $name ?></p>
+
+
 
 </body>
 
