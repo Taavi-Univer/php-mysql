@@ -1,14 +1,17 @@
 <?php
 
+declare(strict_types=1); // if the types do not match an error message will be displayed
+
 $price = 3;
 $quantity = 6;
 
-function calculate_total(int $price, int $quantity): int
+
+function calculate_total(int $price, int $quantity, int $discount = 0): int
 {
-    return $price * $quantity;
+    return $price * $quantity - $discount;
 }
 
-$total = calculate_total($price, $quantity);
+$total = calculate_total($price, $quantity, 3);
 
 ?>
 
