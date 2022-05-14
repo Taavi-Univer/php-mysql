@@ -1,4 +1,8 @@
 <?php
+// superglobal arrays
+$host = $_SERVER['HTTP_HOST'];
+$browser = $_SERVER['HTTP_USER_AGENT'];
+// --------------------------------------
 
 $username = 'Taavi';
 
@@ -36,6 +40,8 @@ $user_object2 = new User('Member', 51, false);
 </head>
 
 <body>
+    <h2><?= $host ?></h2>
+    <h2><?= $browser ?></h2>
     <p>Variable: <?php var_dump($username); ?></p>
     <p>Array: <?php var_dump($user_array); ?></p>
     <p>Object: <?php var_dump($user_object); ?></p>
